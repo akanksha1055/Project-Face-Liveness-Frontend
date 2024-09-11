@@ -1,10 +1,10 @@
 ### TO-DO
-admin
-- login
-- signup
-- forgot password
-- reset password
-- i have a passcode 
+admin login
+- login -> username (auto generated) / email, password -> akanksha
+- signup -> name, phno, email, pass, conf pass -> ishika
+- forgot password -> email, send OTP to mail (expires in 10 mins) -> shivi
+- reset password -> new pass, conf pass -> shivi
+- i have a passcode -> username, code (auto generated, expires after 2 days) -> shivi
 
 admin page 
 - dashboard (who logged in)
