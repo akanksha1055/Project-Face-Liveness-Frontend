@@ -1,37 +1,38 @@
-body {
+.SignUp_body {
 margin: 0;
 height: 100vh;
 background-color: palegoldenrod;
+
 }
 
-img {
+.SignUp_body img {
     height: 15px;
     aspect-ratio: 1;
 }
 
-.container {
+.SignUp_main {
     display:flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 200px;
-    background-color: aliceblue;
-    padding-bottom: 30px;
+    align-items: center;
 }
-.header {
+.SignUp_header {
     display:flex;
     flex-direction: column;
     gap: 9px;
     width: 100%;
     margin-top: 30px;
     align-items: center;
+    justify-content: center;
+    
 }
-.text {
+.SignUp_text {
     color:blue;
     font-size: 48px;
     font-weight: 700;
-   
+    
 }
-.underline {
+.SignUp_underline {
     width: 61px;
     height: 6px;
     background: blue;
@@ -39,23 +40,28 @@ img {
     margin-top: 9px;
     align-items: center;
 }
-.inputs {
+.SignUp_inputs {
     margin-top: 55px;
+    align-items: center;
     display:flex;
     flex-direction: column;
     gap: 24px;
+    width: fit-content;
+
 }
-.input {
+.SignUp_input {
     display: flex;
     align-items: center;
-    margin:auto;
-    width: 480px;height: 80px;background:white;
+    padding-left: 5%;
+    width: 480px;
+    height: 60px;
+    background:white;
     border-radius: 6px;
 }
-.input img{
+.SignUp_input img{
 margin:0px 30px;
 }
-.input input{
+.SignUp_input input{
     height: 50px;
     width: 400px;
     background: transparent;
@@ -64,12 +70,14 @@ margin:0px 30px;
     color:gray;
     font-size: 19px;
 }
-.submit_container{
+.SignUp_submit_container{
     display:flex;
-    gap:30px;
-    margin:60px auto;
+    gap:20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
 }
-.submit{
+.SignUp_submit{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +91,6 @@ margin:0px 30px;
     cursor:pointer;
 }
 
-button {
+.SignUp_button {
     border: none;
 }

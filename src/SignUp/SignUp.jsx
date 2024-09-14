@@ -1,47 +1,41 @@
 import React from "react";
 import './SignUp.css';
-import email from "../Assets/email.png"
-import password from "../Assets/password.png"
-import call from "../Assets/call.png"
-import user from "../Assets/user.png"
+import { FaEye } from "react-icons/fa";
+//import email from "../Assets/email.png"
+//import password from "../Assets/password.png"
+//import call from "../Assets/call.png"
+//import user from "../Assets/user.png"
 
 export default function SignUp(){
     return(
-        <div>
-            <div className="main">
-                <div className="header">
-                    <div className="text">SIGN UP</div>
-                    <div className="underline"></div>
+        <div className="SignUp_body">
+            <div className="SignUp_main">
+                <div className="SignUp_header">
+                    <div className="SignUp_text">SIGN UP</div>
+                    <div className="SignUp_underline"></div>
                 </div>
-                <div className="inputs">
-                    <div className="input">
-                        <img src={user} alt="" />
-                        <input placeholder="name" type="text" />
+                <div className="SignUp_inputs">
+                    <div className="SignUp_input">
+                      <input placeholder="name" type="text" /> 
                     </div>
-                    <div className="input">
-                        <img src={call} alt="" />
-                        <input type="number" placeholder="number" />
+                    <div className="SignUp_input">
+                      <input type="number" placeholder="number" />
                     </div>
-                    <div className="input">
-                        <img src={email} alt="" />
-                        <input placeholder="email" type="email" />
+                    <div className="SignUp_input">
+                      <input placeholder="email" type="email" />
                     </div>
-                    <div className="input">
-                        <img src={password} alt="" />
-                        <input placeholder="password" type="password" />
+                    <div className="SignUp_input">
+                     <input placeholder="password" type="password"  /><FaEye />
                     </div>
-                    <div className="input">
-                        <img src={password} alt="" />
-                        <input type="password" placeholder="confirm password" />
+                    <div className="SignUp_input">
+                    <input type="password" placeholder="confirm password" /><FaEye />
                     </div>
-                    <div className="submit_container">
-                        <button className="submit">SIGN UP</button>
-                        <button className="submit">LOG IN</button>
-                    </div>
-
                 </div>
+                    <div className="SignUp_submit_container">
+                        <button className="SignUp_submit">SIGN UP</button>
+                        <button className="SignUp_submit">LOG IN</button>
+                    </div>
             </div>
-
-        </div>
+         </div>
     );
 }
