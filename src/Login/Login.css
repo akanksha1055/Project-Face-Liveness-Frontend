@@ -19,6 +19,7 @@
     /* position: relative; */
 }
 .login_box {
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +44,7 @@
     align-items: center;
     margin : 0px;
     color: #fffcfc;
+    margin-bottom: 20px;
 }
 
 
@@ -71,7 +73,7 @@
     cursor: pointer;
     position: relative;
     /* margin-left: 10px; */
-    width: 85%
+    width: 94%
 }
 
 .login_box button:hover {
@@ -80,11 +82,30 @@
 
 .eyeImg {
     position: relative;
+    margin: 0px auto;
+    padding: 0px 12px;
+    width: 100%;
 }
 .Login_passIcon
 {
     position: absolute;
     top: 25%;
-    right: 18px;
+    right: 50px;
     color: #1e1e1e;
+}
+.login_form {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+@media (max-width:768px) {
+    .Login_passIcon{
+        right: 35px;
+    }
+    .eyeImg{
+        padding: 0px 8px;
+    }
 }
