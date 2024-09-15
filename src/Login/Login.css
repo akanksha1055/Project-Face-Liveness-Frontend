@@ -56,7 +56,7 @@
     border-radius: 6px;
     margin-top: 5px;
     font-size: 16px;
-    width: 90%;
+    width: 100%;
     background-color: #f0eded;
     color: rgb(0, 0, 0);
     
@@ -73,7 +73,7 @@
     cursor: pointer;
     position: relative;
     /* margin-left: 10px; */
-    width: 94%
+    width: 100%
 }
 
 .login_box button:hover {
@@ -83,14 +83,14 @@
 .eyeImg {
     position: relative;
     margin: 0px auto;
-    padding: 0px 12px;
+    
     width: 100%;
 }
 .Login_passIcon
 {
     position: absolute;
     top: 25%;
-    right: 50px;
+    right: 10px;
     color: #1e1e1e;
     cursor: pointer;
 }
@@ -98,15 +98,14 @@
     width: 90%;
     justify-content: center;
     display: flex;
+    padding: 0px 20px;
     align-items: center;
     flex-direction: column;
 
 }
 @media (max-width:768px) {
     .Login_passIcon{
-        right: 35px;
+        right: 10px;
     }
-    .eyeImg{
-        padding: 0px 8px;
-    }
+   
 }

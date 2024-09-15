@@ -90,7 +90,7 @@ margin:0px 30px;
     background: transparent;
     border:none;
     outline:none;
-    color:gray;
+    color:rgb(0, 0, 0);
     font-size: 16px;
 }
 .SignUp_submit_container{
@@ -99,6 +99,7 @@ margin:0px 30px;
     width: 100%;
     margin-top: 30px;
     padding: 0 20px;
+    margin-bottom: 20px;
     padding-left: 20%;
     padding-right: 20%;
 }
