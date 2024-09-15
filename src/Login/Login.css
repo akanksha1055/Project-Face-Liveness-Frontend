@@ -1,0 +1,112 @@
+
+.Login_Body {
+    
+    background-color: #1e1e1e; 
+    color: #e0e0e0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.login_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding : 20px ;
+    width: 500px;
+    /* position: relative; */
+}
+.login_box {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border : 1px solid #3d3c3c;
+    border-radius: 8px;
+    background-color: #282828 ;
+    box-shadow: 0px 0px 10px rgb(94, 93, 93);
+}
+
+.login_box img {
+    object-fit: contain;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.login_box h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0px;
+    color: #fffcfc;
+    margin-bottom: 20px;
+}
+
+
+
+.Login_input  {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 90%;
+    background-color: #f0eded;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+.login_box button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #7d4cef;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    /* margin-left: 10px; */
+    width: 94%
+}
+
+.login_box button:hover {
+    background-color: #4b26a1; 
+}
+
+.eyeImg {
+    position: relative;
+    margin: 0px auto;
+    padding: 0px 12px;
+    width: 100%;
+}
+.Login_passIcon
+{
+    position: absolute;
+    top: 25%;
+    right: 50px;
+    color: #1e1e1e;
+    cursor: pointer;
+}
+.login_form {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+@media (max-width:768px) {
+    .Login_passIcon{
+        right: 35px;
+    }
+    .eyeImg{
+        padding: 0px 8px;
+    }
+}

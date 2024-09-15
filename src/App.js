@@ -4,13 +4,14 @@ import './App.css';
 //import Home from './Home/Home';
 import SignUp from './SignUp/SignUp';
 
+import Login from './Login/Login';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<SignUp />} />
+        <Route path="/" element={<Home />} />
        
       </Routes>
     </Router>
