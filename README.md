@@ -16,6 +16,9 @@ admin page
 	- user photo
 
 user page
+- data upload page
+  
+  //extras don't mind
 - signup (for now) -> aadhar pdf upload from myaadhar w/ name and DOB
 - authentication page
 	- button to proceed to authentication
@@ -23,3 +26,4 @@ user page
 	- successful / failed prompt
 - welcome page
 	- user details
+   //extras don't mind
