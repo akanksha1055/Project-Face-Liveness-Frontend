@@ -70,8 +70,17 @@ align-items: center;
     height: 35px;
     background:white;
     border-radius: 6px;
+    position: relative;
 
 }
+
+.SignUp_input span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 .SignUp_input img{
 margin:0px 30px;
 }

@@ -1,13 +1,32 @@
+import  { useState } from "react";
 import React from "react";
 import './SignUp.css';
-import { FaEye } from "react-icons/fa";
-//import email from "../Assets/email.png"
-//import password from "../Assets/password.png"
-//import call from "../Assets/call.png"
-//import user from "../Assets/user.png"
-import logo from "../Assets/SignUpLogo.jpg"
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import logo from "../Assets/logo.png";
+
+
 
 export default function SignUp(){
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handlePhoneNumberChange = (e) => {
+    const { value } = e.target;
+    // Only allow numbers
+    const filteredValue = value.replace(/\D/g, "");
+    setPhoneNumber(filteredValue);
+};
+const togglePasswordVisibility = () => {
+  setShowPassword(!showPassword);
+};
+
+const toggleConfirmPasswordVisibility = () => {
+  setShowConfirmPassword(!showConfirmPassword);
+};
+
+
     return(
         <div className="SignUp_body">
             <div className="SignUp_main">
@@ -23,16 +42,23 @@ export default function SignUp(){
                       <input placeholder="Enter Your Name" type="text" /> 
                     </div>
                     <div className="SignUp_input">
-                      <input type="number" placeholder="Enter Your Phone Number" />
+                      <input type="tel" placeholder="Enter Your Phone Number" value={phoneNumber}
+                      onChange={handlePhoneNumberChange} />
                     </div>
                     <div className="SignUp_input">
                       <input placeholder="Enter Your Email" type="email" />
                     </div>
                     <div className="SignUp_input">
-                     <input placeholder="Enter Your Password" type="password"  /><FaEye />
+                     <input placeholder="Enter Your Password" type={showPassword ? "text" : "password"} />
+                     <span onClick={togglePasswordVisibility}>
+                     {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
                     </div>
                     <div className="SignUp_input">
-                    <input type="password" placeholder="Confirm Your Password" /><FaEye />
+                    <input type={showConfirmPassword ? "text" : "password"} placeholder="Confirm Your Password" />
+                    <span onClick={toggleConfirmPasswordVisibility}>
+              {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
                     </div>
                 </div>
                     <div className="SignUp_submit_container">
