@@ -1,8 +1,10 @@
 .SignUp_body {
 margin: 0;
 height: 100vh;
-background-color: palegoldenrod;
-
+background-color:#1e1e1e;
+justify-content: center;
+display: flex;
+align-items: center;
 }
 
 .SignUp_body img {
@@ -15,48 +17,60 @@ background-color: palegoldenrod;
     flex-direction: column;
     margin: auto;
     align-items: center;
+    background: #282828;
+    width:80vw;
+    max-width: 500px;
+    padding-bottom: 1%;
+    border-color: grey;
+    box-shadow: 0 0 7px gray;
+    border-radius: 10px;
 }
 .SignUp_header {
     display:flex;
     flex-direction: column;
     gap: 9px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     
 }
-.SignUp_text {
-    color:blue;
-    font-size: 48px;
+.SignUp_header img {
+   width: 75px;
+   height: 75px;
+   border-radius: 50%;
+}
+.SignUp_text_main {
+    color:white;
+    font-size: 25px;
     font-weight: 700;
     
 }
-.SignUp_underline {
-    width: 61px;
-    height: 6px;
-    background: blue;
-    border-radius:9px;
-    margin-top: 9px;
-    align-items: center;
+.SignUp_text {
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
 }
+
 .SignUp_inputs {
-    margin-top: 55px;
+    margin-top: 25px;
     align-items: center;
     display:flex;
     flex-direction: column;
     gap: 24px;
-    width: fit-content;
-
+    width: 80%;
 }
 .SignUp_input {
     display: flex;
     align-items: center;
     padding-left: 5%;
-    width: 480px;
-    height: 60px;
+    width: 100%;
+    padding-right: 5%;
+    height: 35px;
     background:white;
     border-radius: 6px;
+
 }
 .SignUp_input img{
 margin:0px 30px;
@@ -68,29 +82,33 @@ margin:0px 30px;
     border:none;
     outline:none;
     color:gray;
-    font-size: 19px;
+    font-size: 16px;
 }
 .SignUp_submit_container{
     display:flex;
-    gap:20px;
+    justify-content: space-evenly;
     width: 100%;
-    justify-content: center;
     margin-top: 30px;
+    padding: 0 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .SignUp_submit{
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 60px;
+    width: 40%;
+    height: 40px;
     color:white;
-    background: blue;
-    border-radius: 50px;
-    font-size: 20px;
+    background:#7c4cee;
+    border-radius: 13px;
+    font-size: 13px;
     font-weight: 700;
     cursor:pointer;
+   border: none;
 }
 
 .SignUp_button {
     border: none;
+
 }
