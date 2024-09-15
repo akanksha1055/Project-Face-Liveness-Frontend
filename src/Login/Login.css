@@ -58,7 +58,7 @@
     font-size: 16px;
     width: 90%;
     background-color: #f0eded;
-    color: rgb(221, 217, 217);
+    color: rgb(0, 0, 0);
     
 }
 
@@ -92,6 +92,7 @@
     top: 25%;
     right: 50px;
     color: #1e1e1e;
+    cursor: pointer;
 }
 .login_form {
     width: 90%;
