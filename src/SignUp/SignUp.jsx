@@ -65,7 +65,7 @@ export default function SignUp() {
           <button className="SignUp_submit">SIGN UP</button>
           {/* <button className="SignUp_submit">LOG IN</button> */}
         </div>
-        <div className="login_div">
+        <div className="signupnavigate_div">
           <p>
             <Link to="/" className="login_link">Already have an account?</Link>
           </p>
