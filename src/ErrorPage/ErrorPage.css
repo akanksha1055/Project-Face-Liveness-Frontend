@@ -1,0 +1,36 @@
+.errorPage h1{
+    font-size: 110px;
+    font-weight: 600;
+}
+.errorPage h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 450;
+
+}
+.errorPage {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.error_txt_div {
+    margin-top: 40px;
+    line-height: 0.5;
+    position: relative;
+}
+
+.error_img_div img {
+    /* padding-top: 200px; */
+    height: 400px;
+    width: 500px;
+}
+
+.error_img_div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 150px;
+}
