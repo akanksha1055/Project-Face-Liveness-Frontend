@@ -100,14 +100,15 @@ margin:0px 30px;
     margin-top: 30px;
     padding: 0 20px;
     margin-bottom: 20px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* border: 2px solid red; */
 }
 .SignUp_submit{
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 100%;
     height: 40px;
     color:white;
     background:#7c4cee;
@@ -121,4 +122,13 @@ margin:0px 30px;
 .SignUp_button {
     border: none;
 
+}
+
+.login_link{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.login_link:hover{
+    color: #9383E0;
 }

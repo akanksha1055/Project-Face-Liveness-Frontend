@@ -103,6 +103,20 @@
     flex-direction: column;
 
 }
+.forget_password_div{
+    margin-top: 10px;
+}
+.forget_password_link, .sign_up_link{
+    color: #ccc;
+    font-size: 14px;
+}
+.sign_up_div{
+    margin-top: -20px;
+}
+.forget_password_link:hover, .sign_up_link:hover{
+    color: #9383E0;
+    cursor: pointer;
+}
 @media (max-width:768px) {
     .Login_passIcon{
         right: 10px;
