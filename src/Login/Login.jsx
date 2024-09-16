@@ -11,7 +11,7 @@ const Login = () => {
       <div className="login_div">
         <div className="login_box">
           <img src={loginLogo} alt="Logo" />
-          <h2>Face Liveness</h2>
+          <h2>Next Gen Face Authentication</h2>
           <h3>Login</h3>
           <form action="" className="login_form">
             <input
