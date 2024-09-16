@@ -6,6 +6,7 @@ import Login from './Login/Login';
 import ForgetPassword from './ForgetPassword/ForgetPassword';
 import ResetPassword from './ResetPassword/ResetPassword';
 import SignUp from './SignUp/SignUp';
+import Dashboard from './Dashboard/Dashboard';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={< SignUp/>} />
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/Dashboard" element={< Dashboard/>} />
 
       </Routes>
     </Router>
