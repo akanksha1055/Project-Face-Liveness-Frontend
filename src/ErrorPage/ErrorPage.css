@@ -1,36 +1,65 @@
-.errorPage h1{
-    font-size: 110px;
-    font-weight: 600;
-}
-.errorPage h4{
+.Error_page {
     text-align: center;
-    font-size: 30px;
-    font-weight: 450;
-
-}
-.errorPage {
+    background-color: #000;
+    height: 100vh;
+    color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  .minion-image img {
+    width: 700px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 70px;
+    margin-left: -70px;
+    
+  }
+
+
+  
+  h1 {
+    font-size: 120px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 40px;
+  }
+/*   
+  .buttons {
     display: flex;
-    position: relative;
-}
-
-.error_txt_div {
-    margin-top: 40px;
-    line-height: 0.5;
-    position: relative;
-}
-
-.error_img_div img {
-    /* padding-top: 200px; */
-    height: 400px;
-    width: 500px;
-}
-
-.error_img_div {
+    margin-top: 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     position: relative;
-    top: 150px;
+    padding: 5px;
+    width: auto;
+    gap: 5px;
 }
+*/
+
+  .home_icon{
+    margin-right: 10px;
+
+  }
+  
+  button {
+    height: 40px;
+    width: 120px;
+    background-color: #000;
+    color: #ffffff;
+    border: solid;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
