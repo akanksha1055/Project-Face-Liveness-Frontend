@@ -1,0 +1,138 @@
+.SignUp_body {
+margin: 0;
+min-height: 100vh;
+background-color:#1e1e1e;
+justify-content: center;
+display: flex;
+align-items: center;
+}
+
+.SignUp_body img {
+    height: 15px;
+    aspect-ratio: 1;
+}
+
+.SignUp_main {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background: #282828;
+    width:80vw;
+    max-width: 500px;
+    padding-bottom: 1%;
+    border-color: grey;
+    box-shadow: 0 0 7px gray;
+    border-radius: 10px;
+}
+.SignUp_header {
+    display:flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.SignUp_header img {
+   width: 75px;
+   height: 75px;
+   border-radius: 50%;
+}
+.SignUp_text_main {
+    color:white;
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+.SignUp_text {
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.SignUp_inputs {
+    margin-top: 25px;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 80%;
+}
+.SignUp_input {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 100%;
+    padding-right: 5%;
+    height: 35px;
+    background:white;
+    border-radius: 6px;
+    position: relative;
+
+}
+
+.SignUp_input span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+.SignUp_input img{
+margin:0px 30px;
+}
+.SignUp_input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border:none;
+    outline:none;
+    color:rgb(0, 0, 0);
+    font-size: 16px;
+}
+.SignUp_submit_container{
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* border: 2px solid red; */
+}
+.SignUp_submit{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color:white;
+    background:#7c4cee;
+    border-radius: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor:pointer;
+   border: none;
+}
+
+.SignUp_button {
+    border: none;
+
+}
+
+.login_link{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.login_link:hover{
+    color: #9383E0;
+}
+.signupnavigate_div{
+    margin-top: -20px;
+    padding: 0px;
+}
