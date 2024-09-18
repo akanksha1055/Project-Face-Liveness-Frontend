@@ -4,7 +4,8 @@ import "./Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const [visible, setVisible] = useState(false); // Start with password hidden
+  const [visible, setVisible] = useState(false); 
+  const [showOtp , setOtp] =  useState(false);
 
   return (
     <div className="Login_Body">
@@ -43,7 +44,25 @@ const Login = () => {
                 </span>
               )}
             </div>
-            <button type="submit">Login</button>
+            {showOtp && (
+              <input
+              className="login_otp"
+              type="text"
+              placeholder="Enter OTP"
+              required
+            />
+            ) }
+
+
+            {showOtp ? ( <button 
+               type="submit">
+                login </button>
+            ) : (           
+               <button onClick={() => setOtp(true)}
+                type="submit">
+                send OTP</button>
+            )}
+
           </form>
         </div>
       </div>

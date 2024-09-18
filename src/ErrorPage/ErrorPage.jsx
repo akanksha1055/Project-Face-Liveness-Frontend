@@ -10,10 +10,10 @@ const ErrorPage = () => {
         <img src={Mini} alt="Minions on a Scooter" />
       </div>
       <div className='text_div'>
-        <h1>404</h1>
-        <p>Page not found</p>
+        <h1 className='error_h1'>404</h1>
+        <p className='error_p'>Page not found</p>
           
-          <button className="buttons" onClick={() => window.location.href = '/'}>
+          <button className="buttons" onClick={() =>  window.location.href = '/'}>
              <span className='home_icon'><FaHouseUser /></span>
              Home
           </button>
