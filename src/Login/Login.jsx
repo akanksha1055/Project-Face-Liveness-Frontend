@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import loginLogo from "../Assets/logo.png";
 import "./Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [visible, setVisible] = useState(false); 
@@ -12,7 +13,7 @@ const Login = () => {
       <div className="login_div">
         <div className="login_box">
           <img src={loginLogo} alt="Logo" />
-          <h2>Face Liveness</h2>
+          <h2>Next Gen Face Authentication</h2>
           <h3>Login</h3>
           <form action="" className="login_form">
             <input
@@ -64,7 +65,20 @@ const Login = () => {
             )}
 
           </form>
+
+          <div className="forget_password_div">
+          <p>
+          <Link to="/ForgetPassword" className="forget_password_link">Forget Password?</Link>
+          </p>
         </div>
+        {/* add path to signup */}
+        <div className="sign_up_div">
+          <p>
+          <Link to="/SignUp" className="sign_up_link">Want to signup?</Link>
+          </p>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
