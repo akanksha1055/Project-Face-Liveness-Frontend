@@ -1,32 +1,35 @@
 .Error_page {
-    text-align: center;
-    background-color: #000;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .minion-image img {
-    width: 700px;
-    height: auto;
-    margin-bottom: 20px;
-    margin-right: 70px;
-    margin-left: -70px;
-    
-  }
+  text-align: center;
+  background-color: #000;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.minion-image img {
+  max-width: 700px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-right: 70px;
+  margin-left: -70px;
+
+}
 
 
-  
-  h1 {
-    font-size: 120px;
-    margin: 0;
-  }
-  
-  p {
-    font-size: 40px;
-  }
+
+h1 {
+  font-size: 120px;
+  margin: 0;
+}
+
+p {
+  font-size: 40px;
+}
+
 /*   
   .buttons {
     display: flex;
@@ -41,25 +44,69 @@
 }
 */
 
-  .home_icon{
-    margin-right: 10px;
+.home_icon {
+  margin-right: 10px;
 
+}
+
+button {
+  height: 40px;
+  width: 120px;
+  background-color: #000;
+  color: #ffffff;
+  border: solid;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+
+}
+
+button:hover {
+  background-color: #2a2929;
+}
+
+@media (max-width:768px) {
+
+  h1 {
+    font-size: 10vw;
+    /* Adjust font size for smaller screens */
   }
-  
+
+  p {
+    font-size: 5vw;
+    /* Adjust font size for smaller screens */
+  }
+
   button {
-    height: 40px;
-    width: 120px;
-    background-color: #000;
-    color: #ffffff;
-    border: solid;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    /* border-radius: 5px; */
-    
+    width: 100%;
+    /* Make but100%on smaller */
+  }
+  .Error_page
+  {
+    flex-direction: column; 
+  }
+
+  .minion-image img {
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 12vw; /* Further adjust font size for very small screens */
+  }
+
+  p {
+      font-size: 6vw; /* Further adjust font size for very small screens */
+  }
+
+  button {
+    width: 20vh;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  button:hover {
-    background-color: #ddd;
-  }
-  
+}
