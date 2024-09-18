@@ -22,7 +22,7 @@ const ForgetPassword = () => {
           </div>
           <div className="forget-heading">
             <p className='forget-main-heading'>Next Gen Face Authentication</p>
-            <p className='forget-sub-heading'>Forget Password</p>
+            <p className='forget-sub-heading'>Forgot Password</p>
           </div>        
             
               <div className='password-input-wrapper'>
