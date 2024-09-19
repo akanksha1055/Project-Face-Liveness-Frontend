@@ -120,6 +120,17 @@ margin:0px 30px;
     cursor:pointer;
    border: none;
 }
+.SignUp_submit:hover{
+    background-color: #9383E0;
+}
+
+.signup_form{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
 
 .SignUp_button {
     border: none;
@@ -135,6 +146,14 @@ margin:0px 30px;
     color: #9383E0;
 }
 .signupnavigate_div{
-    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.signupnavigate_div p{
+    margin: 0px;
     padding: 0px;
 }

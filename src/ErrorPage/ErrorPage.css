@@ -41,7 +41,7 @@
 
 }
 
-button {
+.errorbutton {
   height: 40px;
   width: 120px;
   background-color: #000;
@@ -52,7 +52,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.errorbutton:hover {
   background-color: #2a2929;
 }
 

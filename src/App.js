@@ -12,7 +12,6 @@ import SignUp from './SignUp/SignUp';
 import Dashboard from './Dashboard/Dashboard';
 import IHavePassword from './IHavePassword/IHavePassword';
 
-import ErrorPage from './ErrorPage/ErrorPage';
 
 
 function App() {

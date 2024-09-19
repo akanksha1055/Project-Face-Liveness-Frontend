@@ -4,6 +4,7 @@ import "./Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import AlertModal from '../AlertModel/AlertModel'; 
 
 const Login = () => {
   const [visible, setVisible] = useState(false);
@@ -11,9 +12,25 @@ const Login = () => {
   const [usrEmail, setusrEmail] = useState("");
   const [usrPass, setusrPass] = useState("");
   const [usrOTP, setusrOTP] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state for button
+  const [modalOpen, setModalOpen] = useState(false); // Modal open state
+  const [modalMessage, setModalMessage] = useState(""); // Modal message
+  const [isError, setIsError] = useState(false); // Modal error state
+  const [shouldNavigate, setShouldNavigate] = useState(false); // Whether to navigate after modal close
+
   const navigate = useNavigate();
+
+  
+  const closeModal = () => {
+    setModalOpen(false);
+    if (shouldNavigate) {
+      navigate('/Dashboard'); 
+    }
+  };
+
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); 
+    setLoading(true); 
 
     // Send login request to get OTP
     axios.post('http://localhost:5000/admin/login', {
@@ -21,36 +38,52 @@ const Login = () => {
         password: usrPass
       })
       .then((response) => {
-        console.log(response.data.message);
-        alert("OTP sent successfully");
+        setModalMessage(response.data.message);
+        setModalOpen(true); // Open modal
+        setIsError(false); // It's a success
         setOtp(true); // Show OTP input field
       })
       .catch((error) => {
-        console.log(error);
-        alert("Error sending OTP");
+        console.error(error);
+        setModalMessage("please check your email or password");
+        setIsError(true); // It's an error
+        setModalOpen(true); // Open modal
+      })
+      .finally(() => {
+        setLoading(false); // Set loading to false to enable the button
       });
   };
+
   const handleOTP = (e) => {
     e.preventDefault(); // Prevent form submission
+    setLoading(true); // Set loading to true
 
-    // Send login request to get OTP
+    // Send OTP verification request
     axios.post('http://localhost:5000/admin/verify-otp', {
         email: usrEmail,
         otp: usrOTP
       })
       .then((response) => {
-        console.log(response.data);
-        alert("login successfully");
-        localStorage.setItem("adminId" , response.data.adminId);
-        localStorage.setItem("email" , response.data.email);
-        localStorage.setItem("name" , response.data.name);
-        localStorage.setItem("mobileNumber" , response.data.mobileNumber);
-        localStorage.setItem("sessionId" , response.data.sessionId);
-        navigate('/Dashboard');
+        setModalMessage(response.data.message);
+        setIsError(false); 
+        setModalOpen(true); 
+        setShouldNavigate(true); 
+
+      
+        localStorage.setItem("adminId", response.data.adminId);
+        localStorage.setItem("email", response.data.email);
+        localStorage.setItem("name", response.data.name);
+        localStorage.setItem("mobileNumber", response.data.mobileNumber);
+        localStorage.setItem("sessionId", response.data.sessionId);
       })
       .catch((error) => {
-        console.log(error);
-        alert("Error in logging ");
+        console.error(error);
+        setModalMessage("Error in logging");
+        setIsError(true); 
+        setModalOpen(true); 
+      })
+      .finally(() => {
+        setLoading(false); 
       });
   };
 
@@ -61,7 +94,7 @@ const Login = () => {
           <img src={loginLogo} alt="Logo" />
           <h2>Next Gen Face Authentication</h2>
           <h3>Login</h3>
-          <form onSubmit={ showOtp ? handleOTP : handleLogin} className="login_form">
+          <form onSubmit={showOtp ? handleOTP : handleLogin} className="login_form">
             <input
               className="Login_input"
               type="text"
@@ -106,8 +139,8 @@ const Login = () => {
               />
             )}
 
-            <button type="submit">
-              {showOtp ? "Login" : "Send OTP"}
+            <button type="submit" disabled={loading}>
+              {loading ? "Please wait..." : showOtp ? "Login" : "Send OTP"}
             </button>
           </form>
 
@@ -128,6 +161,14 @@ const Login = () => {
           </div>
         </div>
       </div>
+
+      {/* Alert Modal */}
+      <AlertModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        message={modalMessage}
+        isError={isError}
+      />
     </div>
   );
 };

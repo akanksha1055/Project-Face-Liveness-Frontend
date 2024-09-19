@@ -13,7 +13,7 @@ const ErrorPage = () => {
         <h1 className='error_h1'>404</h1>
         <p className='error_p'>Page not found</p>
           
-          <button className="buttons" onClick={() =>  window.location.href = '/'}>
+          <button className="errorbutton" onClick={() =>  window.location.href = '/'}>
              <span className='home_icon'><FaHouseUser /></span>
              Home
           </button>

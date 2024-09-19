@@ -5,7 +5,7 @@ import './Model.css';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { RxCrossCircled } from "react-icons/rx"; 
 
-const SuccessModal = ({ isOpen, onClose, message, isError, isConfirm, onConfirm }) => {
+const AlertModal = ({ isOpen, onClose, message, isError, isConfirm, onConfirm }) => {
   const image = isError ? <RxCrossCircled className='cross-logo' /> : <IoMdCheckmarkCircleOutline className='correct-logo' />;
 
   const handleClose = () => {
@@ -66,7 +66,7 @@ const SuccessModal = ({ isOpen, onClose, message, isError, isConfirm, onConfirm 
 
 
 // Define Prop Types for better type safety
-SuccessModal.propTypes = {
+AlertModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,     // Controls if the modal is open
   onClose: PropTypes.func.isRequired,    // Function to close the modal
   message: PropTypes.string.isRequired,  // Message to display
@@ -76,9 +76,9 @@ SuccessModal.propTypes = {
 };
 
 // Default props
-SuccessModal.defaultProps = {
+AlertModal.defaultProps = {
   onConfirm: null,
   isConfirm: false,
 };
 
-export default SuccessModal;
+export default AlertModal;
