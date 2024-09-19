@@ -7,6 +7,7 @@ import ForgetPassword from './ForgetPassword/ForgetPassword';
 import ResetPassword from './ResetPassword/ResetPassword';
 import SignUp from './SignUp/SignUp';
 import Dashboard from './Dashboard/Dashboard';
+import IHavePassword from './IHavePassword/IHavePassword';
 
 
 
@@ -20,6 +21,8 @@ function App() {
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
         <Route path="/reset_password" element={<ResetPassword />} />
         <Route path="/Dashboard" element={< Dashboard/>} />
+        <Route path="/IHavePassword" element={< IHavePassword/>} />
+
       </Routes>
     </Router>
   );

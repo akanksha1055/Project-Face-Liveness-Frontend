@@ -64,9 +64,9 @@ align-items: center;
 .SignUp_input {
     display: flex;
     align-items: center;
-    padding-left: 5%;
+   
     width: 100%;
-    padding-right: 5%;
+    
     height: 35px;
     background:white;
     border-radius: 6px;
@@ -85,13 +85,15 @@ align-items: center;
 margin:0px 30px;
 }
 .SignUp_input input{
-    height: 50px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     background: transparent;
-    border:none;
-    outline:none;
-    color:rgb(0, 0, 0);
+    border: none;
+    outline: none;
     font-size: 16px;
+    color: rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 0px 10px;
 }
 .SignUp_submit_container{
     display:flex;
