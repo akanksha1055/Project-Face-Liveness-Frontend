@@ -1,7 +1,9 @@
 import React from 'react';
 import './Dashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate=useNavigate();
   const data = [
     {
       aadharNumber: '1233 1542 1542',
@@ -85,8 +87,19 @@ const Dashboard = () => {
     },
   ];
 
+  const handleLogout=()=>
+  {
+      localStorage.removeItem("sessionId");
+      localStorage.removeItem("name");
+      localStorage.removeItem("adminId");
+      localStorage.removeItem("mobileNumber");
+      localStorage.removeItem("email");
+      navigate("/");
+  }
+
   return (
     <div className='dashboard_main'>
+      <p className='dashboard-logout' onClick={handleLogout}>Logout</p>
       <h1 className='verification_title'>Next Gen Auth Face Authentication</h1>
       <h2 className='verification_subtitle'>Admin Dashboard</h2>
       

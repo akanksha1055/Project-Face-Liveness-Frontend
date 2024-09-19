@@ -1,3 +1,25 @@
+.dashboard-logout
+{
+    background-color: #282828;
+    color: red;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+}
+.dashboard-logout:hover
+{
+  cursor: pointer;
+  background-color: #6e44ff;
+  color: white;
+}
 .dashboard_main {
     padding: 20px;
     background-color: #1a1a1a;
