@@ -1,0 +1,62 @@
+.dashboard_main {
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .dashboard_search {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .dashboard_search label {
+    color: white;
+  }
+  
+  .dashboard_searchInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .dashboard_searchInput:focus {
+    border: 2px solid #6e44ff;
+  }
+  
+  .dashboard_searchButton {
+    padding: 10px 20px;
+    background-color: #6e44ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dashboard_table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    background-color: #282828;
+  }
+  
+  .dashboard_tableHeader {
+    background-color: #7d4cef;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .dashboard_tableCell {
+    padding: 15px;
+    border: 1px solid #7d4cef;
+  }
+  
