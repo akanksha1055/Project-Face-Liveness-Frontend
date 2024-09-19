@@ -30,7 +30,7 @@ function App() {
         <Route path="/Dashboard" element={< Dashboard/>} />
         <Route path="/IHavePassword" element={< IHavePassword/>} />
 
-        <Route path="/Error" element={<ErrorPage />} />
+        <Route path="/*" element={<ErrorPage />} />
        
       </Routes>
     </Router>
