@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import loginLogo from "../Assets/logo.png";
 import "./Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -20,6 +20,30 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem("sessionId"); // Remove session ID from local storage
+    navigate("/"); // Redirect back to login page
+  };
+
+  useEffect(() => {
+    document.title = "Admin:login";
+
+    // Check if session ID exists in local storage and is still valid
+    const sessionId = localStorage.getItem("sessionId");
+    if (sessionId) {
+      // Verify the session ID with the backend
+      axios
+        .post("http://localhost:5000/admin/verify-session", { sessionId })
+        .then((response) => {
+          if (response.data.valid) {
+            navigate("/Dashboard"); // Navigate to dashboard if session is valid
+          } else {
+            handleLogout();
+          }
+        })
+        .catch(() => handleLogout());
+    }
+  }, [navigate]);
   
   const closeModal = () => {
     setModalOpen(false);
