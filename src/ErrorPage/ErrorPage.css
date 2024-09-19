@@ -1,0 +1,119 @@
+.Error_page {
+  text-align: center;
+  background-color: #000;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 50px;
+}
+
+.minion-image img {
+  max-width: 700px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+.error_h1 {
+  font-size: 120px;
+  font-weight: 500;
+  height: 5px;
+  
+}
+
+.error_p {
+  font-size: 40px;
+}
+
+.home_icon {
+  margin-right: 10px;
+
+}
+
+button {
+  height: 40px;
+  width: 120px;
+  background-color: #000;
+  color: #ffffff;
+  border: solid;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2a2929;
+}
+
+@media (max-width:1024px) {
+  .Error_page {
+    flex-direction: column;
+    padding: 0px 50px;
+
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .error_h1 {
+    font-size: 50px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .error_p {
+    font-size: 30px;
+    /* Adjust font size for smaller screens */
+  }
+
+  button {
+    width: 100%;
+    /* Make but100%on smaller */
+  }
+
+  .Error_page {
+    flex-direction: column;
+    padding: 0px 40px;
+
+  }
+
+  .minion-image img {
+    margin: auto;
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error_h1 {
+    font-size: 80px;
+    /* Further adjust font size for very small screens */
+  }
+
+  .error_p {
+    font-size: 30px;
+    /* Further adjust font size for very small screens */
+  }
+
+  .buttons {
+    width: 120px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .minion-image img {
+    width: 250px;
+  }
+}

@@ -1,18 +1,46 @@
 import React, { useState } from 'react';
 import main_logo from '../Assets/logo.png';
 import './IHavePassword.css';
+import axios from 'axios';
 
 const IHavePassword = () => {
-  const [Mail, setMail] = useState({ mail: '' });
-  const [otp, setOtp] = useState({ otp: '' });
+  const [Mail, setMail] = useState('');
+  const [otp, setOtp] = useState('');
   
-  const iHavePasswordEmail = () => {
-    if (Mail.mail) {
-      alert("request sent")
-    } else {
-     alert("request not sent")
+  
+
+  const postRequestIHavePassword = async () => {
+
+    if (!Mail) {
+      alert("Email not valid");
+      return;
+    } 
+
+    const requestPayload = {
+      'email' : Mail,
+      'otp'   : otp,
     }
-  };
+
+    try {
+      const url = 'http://localhost:5000/admin/verifypasscode';
+
+      
+
+      const response = await axios.post( url, requestPayload);
+      
+
+      if (response.status == 200) {
+        alert('Success');
+      }
+      
+      console.log('response:- ', JSON.stringify(response));
+      
+      
+    } catch (error) {
+      console.log('error:- ', error)
+    }
+    
+  }
 
   return (
     <>
@@ -29,8 +57,8 @@ const IHavePassword = () => {
               <div className='password-input-wrapper'>
                 <input
                   type="email"
-                  value={Mail.mail}
-                  onChange={(e) => setMail({ ...Mail, mail: e.target.value })}
+                  value={Mail}
+                  onChange={(e) => setMail(e.target.value )}
                   placeholder="Email address"
                   className="input-field"
                 />
@@ -40,7 +68,7 @@ const IHavePassword = () => {
                 <input
                   type="otp"
                   value={otp.otp}
-                  onChange={(e) => setOtp({ ...otp, otp: e.target.value })}
+                  onChange={(e) => setOtp(e.target.value)}
                   placeholder="OTP"
                   className="input-field"
                 />
@@ -48,7 +76,7 @@ const IHavePassword = () => {
 
               <div>
                 <button
-                  onClick={iHavePasswordEmail}
+                  onClick={postRequestIHavePassword}
                   type="submit"
                   className="iHave-submit-button"
                 >
